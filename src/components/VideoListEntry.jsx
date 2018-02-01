@@ -10,7 +10,7 @@ var VideoListEntry = (props) => {
         <div className="video-list-entry-detail">{props.video.snippet.description}</div>
       </div>
     </div>
-  );
+  )
 };
 
 
