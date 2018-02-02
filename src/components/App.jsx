@@ -11,7 +11,13 @@ class App extends React.Component {
   onVideoItemClick(video) {
     this.setState({
       video: video,
-      // videos: videos
+    })
+  }
+
+  onSearch(videos) {
+    this.setState({
+      videos: videos,
+      video: videos[0]
     })
   }
 
@@ -20,7 +26,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <Search />
+            <Search method={this.onSearch.bind(this)} />
           </div>
         </nav>
         <div className="row">
