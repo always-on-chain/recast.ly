@@ -59,6 +59,7 @@ describe('searchYouTube', function() {
     searchYouTube({ key: 'API_KEY', query: 'cats', max: 10 }, () => {});
 
     var params = getURLSearchParams(requests[0].url);
+    console.log('hi', params.key)
     expect(params.key).to.equal('API_KEY');
     expect(params.q).to.equal('cats');
     expect(params.maxResults).to.equal('10');
@@ -72,6 +73,7 @@ describe('searchYouTube', function() {
       query: 'react',
       max: 5
     };
+    done();
 
     // We want this test to make a real AJAX request
     xhr.restore();

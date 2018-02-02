@@ -3,15 +3,15 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      video: this.props.list[2],
+      video: this.props.list[0],
       videos: this.props.list
     }
   }
 
   onVideoItemClick(video) {
-    console.log(this)
     this.setState({
-      video: video
+      video: video,
+      // videos: videos
     })
   }
 
